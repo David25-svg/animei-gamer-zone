@@ -130,3 +130,54 @@ footer .brand {
     flex-basis: 36px;
   }
 }
+
+
+/* =========================================================
+   FINAL LOGO SIZE FIX — SITE WIDE
+   ========================================================= */
+header .brand img.brand-logo,
+footer .brand img.brand-logo,
+.brand img.brand-logo {
+  display: block !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  flex: 0 0 42px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  transform: none !important;
+  position: static !important;
+}
+
+header .brand,
+footer .brand,
+.brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+header .brand span,
+footer .brand span {
+  line-height: 1 !important;
+}
+
+@media (max-width: 650px) {
+  header .brand img.brand-logo,
+  footer .brand img.brand-logo,
+  .brand img.brand-logo {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    flex-basis: 34px !important;
+  }
+}
