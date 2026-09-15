@@ -1,3 +1,6 @@
 
 /* Growth system additions — preserves V2 visual system */
 .lead-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.lead-form .full{grid-column:1/-1}.lead-form label{display:block;font-size:12px;font-weight:800;letter-spacing:.04em;margin-bottom:7px}.lead-form input,.lead-form select,.lead-form textarea{width:100%;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);font:inherit}.lead-form textarea{min-height:140px;resize:vertical}.checks{display:flex;gap:14px;flex-wrap:wrap}.checks label{display:flex;gap:7px;align-items:center;font-weight:600}.checks input{width:auto}.micro{font-size:12px;opacity:.72}.seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.seo-card{padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--card)}.seo-card h3{margin-top:8px}.case-detail{padding:26px;border-top:1px solid var(--line)}@media(max-width:760px){.lead-form,.seo-grid{grid-template-columns:1fr}.lead-form .full{grid-column:auto}}
+
+/* Events We Support */
+.events-grid{grid-template-columns:repeat(3,1fr)}.event-card .event-services{font-size:12px;color:var(--muted);margin-top:14px}@media(max-width:900px){.events-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.events-grid{grid-template-columns:1fr}}
