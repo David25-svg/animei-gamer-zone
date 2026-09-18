@@ -1,0 +1,193 @@
+
+/* AniMéi Gamer Zone — restored complete visual system */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#f6f5f1; --card:#ffffff; --text:#111113; --muted:#66666d; --line:#d9d8d3;
+  --purple:#5d176c; --purple2:#8a2a88; --lime:#c9f36b; --black:#0b0b0d;
+  --shadow:0 18px 60px rgba(0,0,0,.12);
+}
+html[data-theme="dark"]{
+  --bg:#0c0c0f; --card:#151519; --text:#f6f5f1; --muted:#aaaab2; --line:#303037;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+section{padding:96px 0}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;margin:0;line-height:.95;letter-spacing:-.045em}
+h1{font-size:clamp(54px,8vw,112px)}
+h2{font-size:clamp(40px,5.4vw,74px)}
+h3{font-size:24px}
+p{margin:0;color:var(--muted)}
+.eyebrow{text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.18em;color:var(--purple);margin-bottom:18px}
+html[data-theme="dark"] .eyebrow{color:var(--lime)}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{min-height:82px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-weight:800;white-space:nowrap}
+.brand-logo{width:48px;height:48px;object-fit:contain}
+.nav nav{margin-left:auto;display:flex;align-items:center;gap:20px}
+.nav nav a{font-size:13px;font-weight:700;white-space:nowrap}
+.nav nav a:hover{color:var(--purple)}
+.theme{border:1px solid var(--line);background:var(--card);color:var(--text);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:800;transition:.2s;background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--purple);color:white;border-color:var(--purple)}
+.btn.white{background:white;color:#111;border-color:white}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+.hero{position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;background:#0d0b11;color:white;padding:110px 0}
+.hero-bg{position:absolute;inset:0;background:
+ radial-gradient(circle at 80% 40%,rgba(201,243,107,.34),transparent 23%),
+ radial-gradient(circle at 65% 70%,rgba(138,42,136,.55),transparent 32%),
+ linear-gradient(125deg,#0b0b0e 0 47%,#351141 47% 72%,#7c2780 100%);
+}
+.hero-bg:after{content:"";position:absolute;width:620px;height:620px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-100px;top:50px}
+.hero-copy{position:relative;z-index:2}
+.hero .eyebrow{color:var(--lime)}
+.hero h1{max-width:900px}
+.hero p{color:#dedbe0;max-width:610px;font-size:19px;margin-top:28px}
+
+.ticker{background:var(--lime);color:#111;overflow:hidden;white-space:nowrap;padding:13px 0;font-weight:900;font-size:12px;letter-spacing:.12em}
+.ticker span{display:inline-block;min-width:max-content;animation:ticker 28s linear infinite}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+.head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:48px}
+.head>p{max-width:400px}
+.service-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.service{padding:34px;min-height:250px;border-right:1px solid var(--line)}
+.service:last-child{border-right:0}
+.service b{display:block;color:var(--purple);font-size:12px;margin-bottom:55px}
+.service h3{margin-bottom:14px}
+.service p{font-size:14px}
+
+.sourcing-section{padding-top:30px}
+.sourcing-panel{background:var(--black);color:white;border-radius:28px;padding:64px;overflow:hidden;position:relative}
+.sourcing-panel:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--purple2),transparent 68%);right:-160px;top:-180px;opacity:.65}
+.sourcing-panel .eyebrow{color:var(--lime)}
+.sourcing-lede{color:#c8c6cb;max-width:720px;font-size:18px;margin-top:24px}
+.sourcing-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#343139;margin-top:44px;border:1px solid #343139;border-radius:16px;overflow:hidden;position:relative;z-index:2}
+.sourcing-group{background:#151419;padding:28px}
+.sourcing-group h3{font-size:19px;margin-bottom:12px}
+.sourcing-group p{color:#aaa7af;font-size:13px}
+.sourcing-line{margin-top:30px;color:var(--lime);font-weight:900;font-size:12px;letter-spacing:.14em}
+
+.visual-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.visual-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
+.visual-card{position:relative;min-height:620px;border-radius:22px;overflow:hidden;background:#111;box-shadow:var(--shadow)}
+.visual-card.small{min-height:300px}
+.visual-card img{position:absolute;width:100%;height:100%;object-fit:cover;transition:.45s}
+.visual-card:hover img{transform:scale(1.025)}
+.visual-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.82))}
+.visual-copy{position:absolute;z-index:2;left:30px;right:30px;bottom:28px;color:white}
+.visual-copy p{color:#ddd}
+.visual-copy .eyebrow{color:var(--lime)}
+
+.market{background:var(--purple);color:white;overflow:hidden}
+.market>.wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:470px;position:relative}
+.market p{color:#e2d5e5;max-width:570px;margin-top:22px;font-size:18px}
+.market .eyebrow{color:var(--lime)}
+.orb{width:470px;height:470px;border-radius:50%;justify-self:end;background:radial-gradient(circle at 65% 65%,var(--lime),#9c8a84 35%,#66236f 70%);box-shadow:0 0 100px rgba(201,243,107,.2)}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.shot{position:relative;height:410px;border-radius:18px;overflow:hidden;background:#111}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot-label{position:absolute;left:18px;bottom:18px;background:white;color:#111;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:900}
+
+.quote{background:#111;color:white;text-align:center}
+.quote h2 span{color:var(--lime)}
+.cta{background:linear-gradient(135deg,#54145f,#8c2788);color:white;text-align:center}
+.cta p{color:#eadfea;margin-top:20px;font-size:18px}
+.cta .actions{justify-content:center}
+
+.page-hero{padding:100px 0 78px;background:linear-gradient(135deg,#111 0 62%,#55155f 62%);color:white}
+.page-hero .eyebrow{color:var(--lime)}
+.page-hero p{color:#d6d3d8;max-width:720px;margin-top:25px;font-size:18px}
+.content{max-width:900px}
+.content h2{font-size:clamp(32px,4vw,54px);margin:12px 0 24px}
+.content p{font-size:17px;margin-bottom:30px}
+
+.contact{max-width:900px}
+.contact>.eyebrow{margin-top:20px}
+.email{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:clamp(24px,4vw,46px);font-weight:700;word-break:break-word;margin:12px 0 18px;color:var(--purple)}
+
+footer{border-top:1px solid var(--line);padding:48px 0;background:var(--card)}
+.footer{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end;font-size:12px;font-weight:700}
+.fine{font-size:11px;margin-top:14px}
+
+/* Growth system */
+.lead-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.lead-form .full{grid-column:1/-1}
+.lead-form label{display:block;font-size:12px;font-weight:800;letter-spacing:.04em;margin-bottom:7px}
+.lead-form input,.lead-form select,.lead-form textarea{width:100%;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);font:inherit}
+.lead-form textarea{min-height:140px;resize:vertical}
+.checks{display:flex;gap:14px;flex-wrap:wrap}
+.checks label{display:flex;gap:7px;align-items:center;font-weight:600}
+.checks input{width:auto}
+.micro{font-size:12px;opacity:.72}
+.seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.seo-card{padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.seo-card h3{margin-top:8px;margin-bottom:12px}
+.case-detail{padding:26px;border-top:1px solid var(--line)}
+.events-grid{grid-template-columns:repeat(3,1fr)}
+.event-card .event-services{font-size:12px;color:var(--muted);margin-top:14px}
+
+@media(max-width:1050px){
+  .nav nav{display:none}
+  .nav .btn.primary{margin-left:auto}
+  .service-strip{grid-template-columns:1fr 1fr}
+  .service:nth-child(2){border-right:0}
+  .service:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .sourcing-groups{grid-template-columns:1fr 1fr}
+  .events-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .wrap{width:min(100% - 30px,1180px)}
+  section{padding:68px 0}
+  header .nav{min-height:70px}
+  .brand span{display:none}
+  .brand-logo{width:42px;height:42px}
+  .nav .btn.primary{font-size:11px;padding:0 15px;min-height:42px}
+  .hero{min-height:650px;padding:90px 0}
+  .hero-bg{background:radial-gradient(circle at 85% 75%,rgba(201,243,107,.25),transparent 22%),linear-gradient(145deg,#0b0b0e 0 55%,#52145e 55% 100%)}
+  .hero p{font-size:16px}
+  .head{display:block}
+  .head>p,.head>.btn{margin-top:22px}
+  .service-strip,.sourcing-groups,.visual-grid,.gallery,.market>.wrap,.lead-form,.seo-grid,.events-grid{grid-template-columns:1fr}
+  .service{border-right:0;border-bottom:1px solid var(--line);min-height:auto}
+  .service:last-child{border-bottom:0}
+  .service b{margin-bottom:30px}
+  .sourcing-panel{padding:38px 24px}
+  .visual-card,.visual-card.small{min-height:390px}
+  .visual-stack{grid-template-rows:none}
+  .orb{width:280px;height:280px;justify-self:center;margin-top:45px}
+  .market>.wrap{padding:10px 0}
+  .shot{height:360px}
+  .footer{display:block}
+  .footer-links{justify-content:flex-start;margin-top:28px}
+  .lead-form .full{grid-column:auto}
+}
+@media(max-width:480px){
+  h1{font-size:clamp(46px,15vw,68px)}
+  h2{font-size:clamp(36px,12vw,52px)}
+  .theme{display:none}
+  .nav{gap:10px}
+  .actions .btn{width:100%}
+}
+
+/* International growth pages */
+.seo-card[href]{display:block;transition:transform .2s ease,border-color .2s ease}
+.seo-card[href]:hover{transform:translateY(-3px);border-color:var(--purple)}
+.page-hero .actions{margin-top:30px}
+.market-entry-note{font-size:13px;color:var(--muted)}
+
+/* Conversion + proof layer */
+.proof-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}.proof-strip>div{border:1px solid var(--line);padding:24px;border-radius:18px;background:var(--card)}.proof-strip strong{display:block;font-size:clamp(2rem,4vw,4rem);line-height:1}.proof-strip span{display:block;margin-top:8px;font-size:.9rem;opacity:.78}.dark .proof-strip>div{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15)}@media(max-width:800px){.proof-strip{grid-template-columns:1fr 1fr}}
+
+/* PAX East 2026 photographic proof */
+.case-photo-hero{padding:34px 0 10px}.case-photo-hero img{display:block;width:100%;max-height:680px;object-fit:cover;border-radius:22px;border:1px solid var(--line)}.case-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.case-gallery figure{margin:0;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:var(--card)}.case-gallery img{display:block;width:100%;height:360px;object-fit:cover}.home-case-image{display:block;margin:20px 0 26px;overflow:hidden;border-radius:22px;border:1px solid var(--line)}.home-case-image img{display:block;width:100%;height:min(52vw,580px);object-fit:cover}.work-photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}.work-photo-row img{width:100%;height:300px;object-fit:cover;border-radius:16px;border:1px solid var(--line)}@media(max-width:760px){.case-gallery,.work-photo-row{grid-template-columns:1fr}.case-gallery img,.work-photo-row img{height:280px}}
